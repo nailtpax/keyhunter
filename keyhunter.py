@@ -19,14 +19,14 @@ banner = r"""
 def main():
 
     if len(sys.argv) == 1:
-        # Show banner and only this line
+       
         print(banner)
         print("Please provide a URL!\n")
         print("Usage: python3 keyhunter.py <url> [wordlist]\n")
-        print("If no wordlist is provided, the default one will be used.\n")
+        print("If no wordlist is provided, the default one will be used.")
         return 0
 
-    # Print banner and start message if URL is provided
+  
     print(banner)
     print("\n[+] Starting the hunt for keys and tokens...")
 
