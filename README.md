@@ -1,5 +1,8 @@
 # keyhunter
 
+![Hunt. Seek. Find](images/keyhunterdog.png)
+
+
 A lightweight utility for **discovering and collecting keys/tokens** in HTML pages — intended for lab use and authorized security assessments.  
 
 ---
