@@ -15,34 +15,38 @@ banner = r"""
 #Hunt. Seek. Find           |             Code by nailtpax #
 ############################################################
 """
-print(banner)
 
 def main():
 
     if len(sys.argv) == 1:
-        print ("Use: python keyhunter.py <url> <wordlist>")
-        print("It is possible to use a default word list, just do not inform the second parameter")
+        # Show banner and only this line
+        print(banner)
+        print("Please provide a URL!")
         return 0
+
+    # Print banner and start message if URL is provided
+    print(banner)
+    print("\n[+] Starting the hunt for keys and tokens...")
 
     wordlist = []
     keywords = [
-            "api_key", "apikey", "_API_key", "token", "access_token",
-            "auth_token", "client_secret", "clientid", "client_id",
-            "secret", "authorization", "x-api-key", "bearer",
-            "password", "passwd", "pwd", "passphrase",
-            "private_key", "privkey", "ssh_key", "rsa_key", "dsa_key",
-            "secret_key", "app_key", "consumer_key", "consumer_secret",
-            "jwt", "jwt_secret", "oauth_token", "oauth_secret",
-            "session_token", "sessionid", "cookie", "auth", "credentials",
-            "encryption_key", "enckey", "signing_key", "s3_key",
-            "db_password", "database_password", "token_key", "refresh_token",
-            "accesskey", "access_key_id", "secret_access_key",
-            "vault_token", "private_token", "secret_token",
-            "aws_access_key_id", "aws_secret_access_key", "aws_session_token",
-            "gcp_api_key", "gcp_client_email", "gcp_private_key",
-            "azure_client_id", "azure_client_secret", "azure_tenant_id",
-            "heroku_api_key", "slack_token", "discord_token", "telegram_token"
-        ]
+        "api_key", "apikey", "_API_key", "token", "access_token",
+        "auth_token", "client_secret", "clientid", "client_id",
+        "secret", "authorization", "x-api-key", "bearer",
+        "password", "passwd", "pwd", "passphrase",
+        "private_key", "privkey", "ssh_key", "rsa_key", "dsa_key",
+        "secret_key", "app_key", "consumer_key", "consumer_secret",
+        "jwt", "jwt_secret", "oauth_token", "oauth_secret",
+        "session_token", "sessionid", "cookie", "auth", "credentials",
+        "encryption_key", "enckey", "signing_key", "s3_key",
+        "db_password", "database_password", "token_key", "refresh_token",
+        "accesskey", "access_key_id", "secret_access_key",
+        "vault_token", "private_token", "secret_token",
+        "aws_access_key_id", "aws_secret_access_key", "aws_session_token",
+        "gcp_api_key", "gcp_client_email", "gcp_private_key",
+        "azure_client_id", "azure_client_secret", "azure_tenant_id",
+        "heroku_api_key", "slack_token", "discord_token", "telegram_token"
+    ]
     if len(sys.argv) > 2:
         try:
             with open(sys.argv[2], 'r') as f:
@@ -85,5 +89,4 @@ def main():
     search_keywords(html_content, "HTML")
 
 if __name__ == "__main__":
-    print("\n[+] Starting the hunt for keys and tokens...")
     main()
