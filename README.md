@@ -31,3 +31,10 @@ cd keyhunter
 
 # install dependencies if requirements.txt exists
 pip install -r requirements.txt
+```
+## 🙏 Credits
+
+- Inspired by several open source security tools for secret detection.
+- Thanks to my personal friend [@JoaoVitorBranco](https://github.com/JoaoVitorBranco) who contributed ideas to the code and has constantly encouraged me to improve my development skills.
+
+Contributions, feedback, and improvements are always welcome.
