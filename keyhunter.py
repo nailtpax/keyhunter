@@ -21,7 +21,9 @@ def main():
     if len(sys.argv) == 1:
         # Show banner and only this line
         print(banner)
-        print("Please provide a URL!")
+        print("Please provide a URL!\n")
+        print("Usage: python3 keyhunter.py <url> [wordlist]\n")
+        print("If no wordlist is provided, the default one will be used.\n")
         return 0
 
     # Print banner and start message if URL is provided
