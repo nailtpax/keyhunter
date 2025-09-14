@@ -26,7 +26,7 @@ A lightweight utility for **discovering and collecting keys/tokens** in HTML pag
 
 ```bash
 # clone repository
-git clone https://github.com/<your-username>/keyhunter.git
+git clone https://github.com/nailtpax/keyhunter.git
 cd keyhunter
 
 # install dependencies if requirements.txt exists
