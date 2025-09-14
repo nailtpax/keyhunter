@@ -35,6 +35,18 @@ cd keyhunter
 # install dependencies if requirements.txt exists
 pip install -r requirements.txt
 ```
+
+## ▶️ Usage
+
+After installation, run `keyhunter` with Python:
+
+```bash
+# scan a live URL
+python3 keyhunter.py https://example.com
+
+# scan a local HTML file
+python3 keyhunter.py path/to/file.html
+```
 ## 🙏 Credits
 
 - Inspired by several open source security tools for secret detection.
