@@ -20,8 +20,8 @@ print(banner)
 def main():
 
     if len(sys.argv) == 1:
-        print ("Uso: python keyhunter.py <url> <wordlist>")
-        print("É possível utilizar a wordlist default, basta não informar o segundo parâmetro.")
+        print ("Use: python keyhunter.py <url> <wordlist>")
+        print("It is possible to use a default word list, just do not inform the second parameter")
         return 0
 
     wordlist = []
@@ -48,10 +48,10 @@ def main():
             with open(sys.argv[2], 'r') as f:
                 wordlist = [line.strip() for line in f if line.strip()]
         except FileNotFoundError:
-            print(f"Wordlist '{sys.argv[2]}' não encontrada. Usando wordlist padrão.")
+            print(f"Wordlist '{sys.argv[2]}' not found. Using default wordlist.")
             wordlist = keywords
     else:
-        print("Usando wordlist padrão.")
+        print("Using default wordlist.")
         wordlist = keywords
 
     site = sys.argv[1].strip()
@@ -69,7 +69,7 @@ def main():
             matches = re.findall(rf"{word}['\"]?\s*[:=]\s*['\"]?([\w-]+)", content, re.IGNORECASE)
             if matches:
                 found = True
-                print(f"\n[+] PossÃvel '{word}' encontrado no {source}:")
+                print(f"\n[+] Possible '{word}' found in {source}:")
                 for m in matches:
                     print(f"    {m}")
         return found
@@ -78,12 +78,12 @@ def main():
         r = requests.get(site)
         r.raise_for_status()
     except Exception as e:
-        print(f"Erro ao acessar o site: {e}")
+        print(f"Error accessing the website: {e}")
         exit()
 
     html_content = r.text
     search_keywords(html_content, "HTML")
 
 if __name__ == "__main__":
-    print("\n[+] Iniciando busca por chaves e tokens...")
+    print("\n[+] Starting the hunt for keys and tokens...")
     main()
